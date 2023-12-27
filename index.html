@@ -1,63 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram Post</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://kit.fontawesome.com/0f06c2769a.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+    integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Document</title>
 </head>
 <body>
-    <div class="post">
-        <div class="post-header">
-            <div class="post-header-left">
-                <i class="fa-brands fa-html5"></i>
-                <div class="post-header-author">
-                    <strong>HTML5</strong>
-                    <span>Santiago</span>
-
-                </div>
-            </div>
-            <div class="post-header-right">
-                <i class="fa-solid fa-ellipsis-vertical"></i>  
-            </div>
-            
+  <!--Nav Bar-->
+  <nav class="navbar navbar-expand-lg bg-light">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <i class="fa-brands fa-instagram mx-1"></i>
+      <span>Instagram</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+      <ul class="navbar-nav align-items-center">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Create a new post
+            </button>
+          </a>
+        </li>
+        <div class="btn-group">
+          <button type="button" class="btn btn-secondary"><i class="fa-solid fa-gear"></i></button>
+          <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Accesibility</a></li>
+            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+          </ul>
         </div>
-        <div class="post-body">
-            <img src="https://cdn1.photostockeditor.com/c/1712/italy-road-between-green-grass-field-near-mountains-under-blue-and-brown-sky-at-golden-hour-landscape-landscape-image.jpg" alt="">
+      </ul>
+    </div>
+  </nav>
+  <!--/Nav Bar-->
+  <ul class="nav nav-tabs d-flex justify-content-center my-2 id=" myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button"
+        role="tab" aria-controls="home-tab-pane" aria-selected="true"><i class="fa fa-bars"></i></button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button"
+        role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i class=" fa fa-th-large"></i></button>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+      <div class="row ">
+        <div class="col-lg-4 col-md-4 col-sm-4 mb-3">
+          <img class="img-fluid" src="https://picsum.photos/id/129/600/500" alt="">
         </div>
-
-        <div class="post-footer">
-            <div class="icons">
-                <div class="left-icons">
-                    <i class="fa-regular fa-heart"></i>
-                    <i class="fa-regular fa-comments"></i>
-                    <i class="fa-regular fa-paper-plane"></i>
-                </div>
-                <div class="right-icon">
-                    <i class="fa-regular fa-bookmark"></i>
-                </div>
-                
-                
-
-            </div>
-            <div class="textos-footer">
-
-                <div class="likes">Liked by <b>4GeeksAcademy</b>, <b>html5</b>, <b>Web</b> and <b>100,000 others</b></div>
-                <br>
-                <div class="descripcion">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
-                    tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-                    consequat.
-                </div>
-
-            </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 mb-3">
+          <img class="img-fluid" src="https://picsum.photos/id/128/600/500" alt="">
         </div>
-    
+        <div class="col-lg-4 col-md-4 col-sm-4 mb-3">
+          <img class="img-fluid" src="https://picsum.photos/id/127/600/500" alt="">
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 mb-3">
+          <img class="img-fluid" src="https://picsum.photos/id/126/600/500" alt="">
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 mb-3">
+          <img class="img-fluid" src="https://picsum.photos/id/125/600/500" alt="">
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 mb-3">
+          <img class="img-fluid" src="https://picsum.photos/id/124/600/500" alt="">
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 mb-3">
+          <img class="img-fluid" src="https://picsum.photos/id/123/600/500" alt="">
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 mb-3">
+          <img class="img-fluid" src="https://picsum.photos/id/130/600/500" alt="">
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 mb-3">
+          <img class="img-fluid" src="https://picsum.photos/id/131/600/500" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+      <div class="row my-4">
+        <div class="col-lg-5 col-md-7 col-sm-11 mx-auto shadow">
+          <div class="d-flex justify-content-between">
+            <h3>El verdadero G.O.A.T</h3>
+            <h4 class="justify-content-end"> 28/02</h4>
+          </div>
+          <div>
+            <img class="img-fluid" src="https://depor.com/resizer/I8pTAis8Rb8R45QQusKrg4dugT0=/980x0/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/BOBHZBD3NJDENEKBTMUAM24ECE.jpg" alt="">
+          </div>
+          <div class="p-2">
+            <p><b>208 likes</b></p>
+            <p>Ut mattis commodo tellus ac elementum. Nam suscipit leo ut quam vehicula, vulputate dapibus
+              ante
+              egestas.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row my-4">
+        <div class="col-lg-5 col-md-7 col-sm-11 mx-auto shadow">
+          <div class="d-flex justify-content-between">
+            <h3>Jugador con mas titulos en la historia!</h3>
+            <h4 class="justify-content-end"> 28/02</h4>
+          </div>
+          <div>
+
+          </div>
+          <div>
+            <img class="img-fluid " src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/768b09da-5bcf-4e09-8912-c0424310faa6/dfu4y8x-4df93e81-acc5-4265-9377-e8ce277f00ec.jpg/v1/fill/w_799,h_1000,q_70,strp/messi_titulos_trophies_mundial_goat_by_elsextetefcb_dfu4y8x-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTYwMSIsInBhdGgiOiJcL2ZcLzc2OGIwOWRhLTViY2YtNGUwOS04OTEyLWMwNDI0MzEwZmFhNlwvZGZ1NHk4eC00ZGY5M2U4MS1hY2M1LTQyNjUtOTM3Ny1lOGNlMjc3ZjAwZWMuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.RxDPVk0_5dMSqHDVWP_QvBaO7sweWstVQo17gbsX9_c" alt="">
+          </div>
+          <div class="p-2">
+            <p><b>208 likes</b></p>
+            <p>Ut mattis commodo tellus ac elementum. Nam suscipit leo ut quam vehicula, vulputate dapibus
+              ante
+              egestas.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row my-4">
+        <div class="col-lg-5 col-md-7 col-sm-11 mx-auto shadow">
+          <div class="d-flex justify-content-between">
+            <h3>Campeon del Mundo</h3>
+            <h4 class="justify-content-end"> 28/02</h4>
+          </div>
+          <div>
+
+          </div>
+          <div>
+            <img class="img-fluid" src="https://caracoltv.brightspotcdn.com/dims4/default/868b12d/2147483647/strip/true/crop/1280x720+0+0/resize/1000x563!/format/webp/quality/90/?url=http%3A%2F%2Fcaracol-brightspot.s3.amazonaws.com%2Fb6%2F0d%2F4155d9e14ea29d9cf4b7f7f45c3f%2Fmessi.jpg" alt="">
+          </div>
+          <div class="p-2">
+            <p><b>208 likes</b></p>
+            <p>Ut mattis commodo tellus ac elementum. Nam suscipit leo ut quam vehicula, vulputate dapibus
+              ante
+              egestas.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row my-4">
+        <div class="col-lg-5 col-md-7 col-sm-11 mx-auto shadow">
+          <div class="d-flex justify-content-between">
+            <h3>8 bolones de oro</h3>
+            <h4 class="justify-content-end"> 28/02</h4>
+          </div>
+          <div>
+
+          </div>
+          <div>
+            <img class="img-fluid" src="https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt4d03abb4093d5005/60dbca03bbd30c0f67e2822d/d67d6cb2d35c0afe9a22c242759377de9b652a75.jpg?auto=webp&format=pjpg&width=1200&quality=60" alt="">
+          </div>
+          <div class="p-2">
+            <p><b>208 likes</b></p>
+            <p>Ut mattis commodo tellus ac elementum. Nam suscipit leo ut quam vehicula, vulputate dapibus
+              ante
+              egestas.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row my-4">
+        <div class="col-lg-5 col-md-7 col-sm-11 mx-auto shadow">
+          <div class="d-flex justify-content-between">
+            <h3>Aqui empezo todo!</h3>
+            <h4 class="justify-content-end"> 28/02</h4>
+          </div>
+          <div>
+
+          </div>
+          <div>
+            <img class="img-fluid" src="https://imagenes.elpais.com/resizer/0U-pUCpEGsoBmuFY-MwpESAWUQE=/1200x0/filters:focal(2105x1155:2115x1165)/cloudfront-eu-central-1.images.arcpublishing.com/prisa/HGPVZQZLCXI5R6COJQX5UQQHXI.jpg" alt="">
+          </div>
+          <div class="p-2">
+            <p><b>208 likes</b></p>
+            <p>Ut mattis commodo tellus ac elementum. Nam suscipit leo ut quam vehicula, vulputate dapibus
+              ante
+              egestas.</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Create new post</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Caption:</label>
+              <input type="text" class="form-control" id="recipient-name">
+              <div class="row">
+                <div class="col-1">
+                  <i class="fa-solid fa-camera"></i>
+                </div>
+                <div class="col-1">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+              </div>
+              
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success">Publish</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
+    integrity="sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+
+
+
+
+
 </body>
+
 </html>
